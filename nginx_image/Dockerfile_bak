@@ -1,0 +1,19 @@
+FROM centos:latest
+
+MAINTAINER bin "cheukbinli@icloud.com"
+
+RUN mkdir temp
+WORKDIR temp
+#NGINX
+ADD http://nginx.org/download/nginx-1.13.7.tar.gz /temp
+#LUA
+ADD http://luajit.org/download/LuaJIT-2.0.5.tar.gz /temp
+#pecl
+ADD https://ftp.pcre.org/pub/pcre/pcre2-10.30.tar.gz /temp
+
+#RUN yum install -y zlib openssl make
+
+RUN tar -zxvf nginx-1.13.7.tar.gz
+RUN tar -zxvf LuaJIT-2.0.5.tar.gz 
+RUN tar -zxvf pcre2-10.30.tar.gz
+RUN ls
