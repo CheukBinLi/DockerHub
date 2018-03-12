@@ -26,5 +26,6 @@ VOLUME /usr/local/tomcat/logs/ /usr/local/tomcat/conf/ /apps/webapp/webroot/ /ap
 
 EXPOSE 8080
 
-CMD /apps/sh/run.sh
+#CMD /apps/sh/run.sh
+ENTRYPOINT /apps/sh/run.sh
 
